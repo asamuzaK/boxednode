@@ -58,7 +58,7 @@ jobs:
         run: npm install -g npm@8.x
       - name: Install Dependencies
         run: npm install
-      - name: Sharded tests
-        run: npm test -- -g "shard ${{ matrix.shard }}"
       - name: Unsharded tests
         run: npm test -- -g "shard [1-3]" -i
+      - name: Sharded tests
+        run: npm test -- -g "shard ${{ matrix.shard }}"
